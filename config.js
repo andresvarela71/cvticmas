@@ -32,7 +32,7 @@ function escuchar() {
                 document.getElementById("icono" + t).style.fontSize = null;
                 }
             }
-            for (let q = 0; q < 12;                 q++) {
+            for (let q = 0; q < 12; q++) {
                 document.getElementById("cont" + q).innerHTML = ""; 
                 
             }
@@ -45,13 +45,7 @@ function escuchar() {
         ico[x] = document.getElementById("icono" + x);
         ico[x].addEventListener("mouseout", function() {
             document.getElementById("texto").innerHTML = "";
-            
-        
-           
-           
-              
-            
-           
+                    
         }   
         )
     

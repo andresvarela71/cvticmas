@@ -5,18 +5,18 @@
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-    grid-template-rows: 30px 200px 100px 75px 3fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em 200px 6em 4em 1fr;
     justify-items: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.5em;
 }
 
 #cv {
    font-size: calc(var(--letrasize)/3*2*1em);
-   grid-column: 1 / 9;
+   grid-column: 1;
    grid-row: 1;
-    
+     
 }
 
 
@@ -25,15 +25,16 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    grid-column: 1 / 9;
+    grid-column: 1;
     grid-row: 2;
     display: block;
 }
 
 nav {
     height: calc(var(--iconosize)*1em + 2em);;
-    grid-column: 1 / 9;
+    grid-column: 1;
     grid-row: 3;
+    justify-self: stretch;
 
    
    
@@ -41,8 +42,7 @@ nav {
 
 #contenedor2 {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-   /* grid-template-rows: 1fr ;*/
+    grid-template-columns: 3fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 3fr;
     grid-template-rows: 100px;
     justify-items: center;
     align-items: center;
@@ -50,7 +50,8 @@ nav {
 }
 
 .ul {
-
+    margin: 0;
+    padding: 0;
     list-style: none;
    
 }
@@ -77,7 +78,7 @@ nav {
 
 #ico0 {
     margin: 0;
-    padding: 1em;
+    
     grid-column: 2;
    
 }
@@ -89,7 +90,7 @@ nav {
 
 #ico1 {
     margin: 0;
-    padding: 1em;
+    
     grid-column: 4;
     
 }
@@ -101,7 +102,7 @@ nav {
 
 #ico2 {
     margin: 0;
-    padding: 1em;
+    
     grid-column: 6;
     
 }
@@ -113,7 +114,7 @@ nav {
 
 #ico3 {
     margin: 0;
-    padding: 1em;
+    
     grid-column: 8;
    
 }
@@ -132,12 +133,14 @@ li i:hover {
 }
 
 #texto {
+    vertical-align: middle;
     font-size: calc(var(--letrasize)/1.5*1em);;
    
 }
 
 article {
-    grid-column: 1 / 9;
+    display: table-cell;
+    grid-column: 1;
     grid-row: 4;
 }
 
@@ -162,7 +165,7 @@ section {
     }
 
     li i:hover {
-        font-size: calc(var(--iconosize)*1em + 2em);;
+        font-size: calc(var(--iconosize)*1em + 2em);
     }
 
     #texto {
