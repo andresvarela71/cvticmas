@@ -1,3 +1,8 @@
+:root {
+    --iconosize: 4;
+    --letrasize: 3;
+}
+
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
@@ -8,7 +13,7 @@
 }
 
 #cv {
-   font-size: 3em;
+   font-size: calc(var(--letrasize)/3*2*1em);
    grid-column: 1 / 9;
    grid-row: 1;
     
@@ -26,7 +31,7 @@
 }
 
 nav {
-    height: 6em;
+    height: calc(var(--iconosize)*1em + 2em);;
     grid-column: 1 / 9;
     grid-row: 3;
 
@@ -60,7 +65,7 @@ nav {
 
 .icono {
     
-        font-size: 4em;
+        font-size: calc(var(--iconosize)*1em - 1em);;
         color: gray;
        
 }
@@ -120,14 +125,14 @@ nav {
 
 
 li i:hover {
-    font-size: 6em;
+    font-size: calc(var(--iconosize)*1.5*1em);
     color: green;
     cursor: pointer;
    
 }
 
 #texto {
-    font-size: 2em;
+    font-size: calc(var(--letrasize)/1.5*1em);;
    
 }
 
@@ -140,4 +145,28 @@ section {
     grid-column: 1 / 9;
     grid-row: 5;
     font-size: 1.25em;
+}
+
+
+@media only screen and (min-width: 768px) {
+    #cv {
+        font-size: calc(var(--letrasize)* 1em);
+    }
+
+    nav {
+        height: calc(var(--iconosize)*1em + 2em);
+    }
+
+    .icono {
+        font-size: calc(var(--iconosize)*1em );
+    }
+
+    li i:hover {
+        font-size: calc(var(--iconosize)*1em + 2em);;
+    }
+
+    #texto {
+        font-size: calc(var(--letrasize)/3*2*1em );
+    }
+
 }
