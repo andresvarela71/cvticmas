@@ -14,11 +14,16 @@
 
 #cv {
    font-size: calc(var(--letrasize)/3*2*1em);
+   color: white;
+   text-shadow: 3px 3px 6px black, 0px 0px 10px blue, 0px 0px 6px darkblue;
    grid-column: 1;
    grid-row: 1;
      
 }
 
+#cv:hover {
+    text-shadow: 3px 3px 6px black, 0px 0px 15px blue, 0px 0px 10px darkblue;
+}
 
 
 #fotoperfil {
@@ -28,6 +33,11 @@
     grid-column: 1;
     grid-row: 2;
     display: block;
+}
+
+#fotoperfil:hover {
+    width: 275px;
+    height: 275px;
 }
 
 nav {

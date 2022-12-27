@@ -19,24 +19,26 @@ var tamanioicono, modif;
 function escuchar() {
     tamanioicono = getComputedStyle(document.documentElement).getPropertyValue("--iconosize");
 
+    let foto = document.getElementById("fotoperfil");
+    foto.addEventListener("mouseover", function() {
+        document.getElementById("texto").innerHTML = "La sonrisa embellece";
+        cancelar();
+    }
+    )
+
+    let fotout = document.getElementById("fotoperfil");
+    fotout.addEventListener("mouseout", function() {
+        borrarcoment();
+    }
+    )
+
+
     for (let x = 0; x < 4; x++) {
         ico[x] = document.getElementById("icono" + x);
         ico[x].addEventListener("mouseover", function() {
            
             document.getElementById("texto").innerHTML = texto[x];
-
-            for (let t = 0; t < 4; t++) {
-            if (cliq[t] == true) {console.log(t);
-                cliq[t] == false;
-                document.getElementById("icono" + t).style.color = null;
-                document.getElementById("icono" + t).style.fontSize = null;
-                }
-            }
-            for (let q = 0; q < 12; q++) {
-                document.getElementById("cont" + q).innerHTML = ""; 
-                
-            }
-           
+            cancelar();   
         }
         )
         
@@ -44,8 +46,7 @@ function escuchar() {
 
         ico[x] = document.getElementById("icono" + x);
         ico[x].addEventListener("mouseout", function() {
-            document.getElementById("texto").innerHTML = "";
-                    
+            borrarcoment();
         }   
         )
     
@@ -58,8 +59,9 @@ function escuchar() {
             modif = tamanioicono * 1.5 + "em"
             document.getElementById("icono" + x).style.fontSize = modif; 
             
-            cliq[x] = true;
-           
+            cliq[x] = true; // indica icono cliqueado
+            
+            //Imprime datos CV
             for (let y = 0; y < 12; y++) {
             document.getElementById("cont" + y).innerHTML = datos[x][y]; 
             }
@@ -67,12 +69,32 @@ function escuchar() {
         }
         )
     }
-     
-
-       
     
 }
 
+// Elimina comentario generado con mouseover
+function borrarcoment() {
+    document.getElementById("texto").innerHTML = null;
+}
 
-    
+// Elimina datos del cv
+function borrardatos() {
+    for (let q = 0; q < 12; q++) {
+        document.getElementById("cont" + q).innerHTML = ""; 
+        
+    }
+} 
+
+// Anula estilo agregado con javascript
+function cancelar() {
+    for (let t = 0; t < 4; t++) {
+        if (cliq[t] == true) {;
+            cliq[t] == false;
+            document.getElementById("icono" + t).style.color = null;
+            document.getElementById("icono" + t).style.fontSize = null;
+            borrardatos();
+            }
+        }
+}
+
 
