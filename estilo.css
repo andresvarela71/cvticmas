@@ -3,6 +3,10 @@
     --letrasize: 3;
 }
 
+body {
+    background-color: aliceblue;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
