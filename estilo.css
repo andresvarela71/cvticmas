@@ -40,6 +40,8 @@ body {
 }
 
 #fotoperfil:hover {
+    transition-property: width height;
+    transition-duration: 5s;
     width: 275px;
     height: 275px;
 }
@@ -140,7 +142,7 @@ nav {
 
 
 li i:hover {
-    font-size: calc(var(--iconosize)*1.5*1em);
+    font-size: calc(var(--iconosize)*1.25*1em);
     color: green;
     cursor: pointer;
    
@@ -148,7 +150,7 @@ li i:hover {
 
 #texto {
     vertical-align: middle;
-    font-size: calc(var(--letrasize)/1.5*1em);;
+    font-size: calc(var(--letrasize)/3*1.5em);;
    
 }
 
@@ -164,6 +166,9 @@ section {
     font-size: 1.25em;
 }
 
+#info {
+    font-size: 1em;
+}
 
 @media only screen and (min-width: 768px) {
     #cv {
@@ -184,6 +189,10 @@ section {
 
     #texto {
         font-size: calc(var(--letrasize)/3*2*1em );
+    }
+
+    #info {
+        font-size: 1.5em;
     }
 
 }
